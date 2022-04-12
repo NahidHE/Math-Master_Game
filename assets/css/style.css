@@ -113,7 +113,7 @@ ul li a:hover {
   min-width: 50%;
   padding-bottom: 100px;
 }
-.soln {
+.solution {
   border-bottom: 2px solid var(--gray);
 }
 .keyboard {
@@ -138,6 +138,9 @@ ul li a:hover {
 }
 .submit:active {
   background: #00b09b;
+}
+button i{
+  pointer-events: none;
 }
 #my__result {
   width: 7ch;
