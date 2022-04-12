@@ -51,6 +51,13 @@
   .question {
     padding-bottom: 20px;
   }
+  .end__game,
+  .start__game{
+    width: 270px;
+    height: 250px;
+    left: 50%;
+    margin-left: -135px;
+  }
 }
 
 @media only screen and (max-width: 280px) {
@@ -67,5 +74,12 @@
   }
   .love {
     font-size: 1.125rem;
+  }
+  .end__game,
+  .start__game{
+    width: 250px;
+    height: 200px;
+    left: 50%;
+    margin-left: -125px;
   }
 }

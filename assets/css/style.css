@@ -181,8 +181,10 @@ button i{
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  text-align: center;
   background-color: var(--white40);
   display: none;
+  box-shadow: rgba(38, 38, 38, 0.2) 0px 8px 24px;
 }
 .blur{
   filter: blur(8px);
