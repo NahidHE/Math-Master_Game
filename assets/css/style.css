@@ -145,6 +145,7 @@ ul li a:hover {
 }
 button i{
   pointer-events: none;
+  font-size: 2rem;
 }
 #my__result {
   width: 7ch;
