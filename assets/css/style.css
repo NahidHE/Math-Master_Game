@@ -1,0 +1,146 @@
+:root {
+  --blue: #2c6cbf;
+  --red: #d92211;
+  --green: #59d986;
+  --black: #0d0d0d;
+  --gray: #262626;
+  --white40: rgba(255, 255, 255, 0.4);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+/*CSS common properties */
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/*Custom design*/
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(#96c93d, #00b09b);
+  color: var(--black);
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 10px 20px 20px 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hamburger {
+  display: none;
+}
+.close {
+  display: none;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+ul li a {
+  transition: ease-in-out 0.2s;
+}
+ul li a:hover {
+  border-bottom: 5px solid var(--black);
+}
+.body {
+  background-color: var(--white40);
+  flex: 1;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.body__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.love {
+  color: var(--white40);
+  font-size: 1.25rem;
+}
+.red {
+  color: var(--red);
+}
+.body__game {
+  flex: 1;
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+}
+.half {
+  width: 50%;
+}
+.question__half {
+  border-right: 1px solid var(--white40);
+  flex: 1;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.question {
+  min-width: 50%;
+  padding-bottom: 100px;
+}
+.soln {
+  border-bottom: 2px solid var(--gray);
+}
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.key {
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  border: none;
+  background-color: var(--white40);
+  font-size: 2rem;
+  color: var(--gray);
+  box-shadow: rgba(38, 38, 38, 0.2) 0px 8px 24px;
+  transition: ease-in-out 0.1s;
+}
+.key:active {
+  background: #96c93d;
+  color: white;
+}
+.submit:active {
+  background: #00b09b;
+}
+#my__result {
+  width: 7ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

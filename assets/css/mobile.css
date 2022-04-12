@@ -1,0 +1,74 @@
+@media only screen and (max-width: 576px) {
+  /*Hamburger */
+  .close {
+    left: 0;
+    right: 0;
+    top: 40px;
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+  }
+  /*Global Thinks */
+  h1 {
+    font-size: 2rem;
+  }
+  /*Custom Design*/
+  .container {
+    padding: 0;
+  }
+  .header {
+    padding: 0px 20px;
+  }
+  .mobile__nav {
+    width: 100%;
+  }
+  .mobile__nav[toggled="true"] {
+    left: 0;
+  }
+  .body {
+    padding: 0;
+  }
+  .body__header {
+    padding: 20px;
+  }
+  .body__game {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .keyboard__half {
+    background-color: var(--white40);
+    padding-top: 40px;
+    padding-bottom: 60px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  .half {
+    width: 100%;
+  }
+  .question__half {
+    border: 0;
+  }
+  .question {
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.125rem;
+  }
+  .key {
+    height: 60px;
+    width: 60px;
+    font-size: 1.5rem;
+  }
+  .submit {
+    width: 130px;
+  }
+  .love {
+    font-size: 1.125rem;
+  }
+}

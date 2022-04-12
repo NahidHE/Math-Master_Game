@@ -1,0 +1,72 @@
+@media only screen and (max-width: 991px) {
+  /*Hamburger Menu*/
+  .container{
+    position: fixed;
+  }
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    font-size: 1.25rem;
+    background: none;
+    border: 0;
+    color: var(--black);
+  }
+  .hamburger[visible="false"] {
+    display: none;
+  }
+  .mobile__nav {
+    position: absolute;
+    display: block;
+    background-color: var(--white40);
+    box-shadow: rgba(38, 38, 38, 0.2) 0px 8px 24px;
+    backdrop-filter: blur(0.5rem);
+    height: 100vh;
+    min-width: 220px;
+    top: 0;
+    left: 100%;
+    width: 60%;
+    z-index: 1;
+    transition: all 0.6s;
+    overflow: hidden;
+  }
+  .mobile__nav[toggled="true"] {
+    display: block;
+    left: 40%;
+  }
+  nav ul {
+    padding-top: 120px;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.25rem;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--white40);
+    box-shadow: rgba(38, 38, 38, 0.2) 0px 8px 24px;
+    cursor: pointer;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  .key {
+    height: 70px;
+    width: 70px;
+  }
+  .submit {
+    width: 150px;
+  }
+}
