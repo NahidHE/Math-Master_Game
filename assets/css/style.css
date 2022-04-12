@@ -152,3 +152,44 @@ button i{
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.play{
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  background-color: #96c93d;
+  border-radius: 10px;
+  color: white;
+  margin-top: 5px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: ease-in-out 0.2s;
+}
+.play:hover{
+  background-color: #00b09b;
+}
+.end__game,
+.start__game{
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  left: 50%;
+  top:50%;
+  margin-top: -150px;
+  margin-left: -250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: var(--white40);
+  display: none;
+}
+.blur{
+  filter: blur(8px);
+}
+.game__over{
+  display: flex;
+}
+.show{
+  display: flex;
+}

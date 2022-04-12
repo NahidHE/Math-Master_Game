@@ -30,21 +30,21 @@
             <button class="hamburger" visible = "true"><i class="fa-solid fa-bars"></i></button>
         </div>
 
-        <div class="body">
+        <div class="body blur">
             <div class="body__header">
-                <h2>Score: &nbsp&nbsp<span id="score">820</span></h2>
+                <h2>Score: &nbsp&nbsp<span id="score">0</span></h2>
                 <div class="love">
-                    <i class="fa-solid fa-heart "></i>
-                    <i class="fa-solid fa-heart "></i>
-                    <i class="fa-solid fa-heart red"></i>
-                    <i class="fa-solid fa-heart red"></i>
-                    <i class="fa-solid fa-heart red"></i>
+                    <i class="fa-solid fa-heart red love__icon"></i>
+                    <i class="fa-solid fa-heart red love__icon"></i>
+                    <i class="fa-solid fa-heart red love__icon"></i>
+                    <i class="fa-solid fa-heart red love__icon"></i>
+                    <i class="fa-solid fa-heart red love__icon"></i>
                 </div>
             </div>
             <div class="body__game">
                 <div class="half question__half center">
                     <div class="question">
-                        <h1>550+120</h1>
+                        <h1 id="random__question">???</h1>
                         <div class="soln">
                             <h1 id="my__result">0</h1>
                         </div>
@@ -67,6 +67,16 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="end__game">
+            <h1>Game Over</h1>
+            <h2>Score: &nbsp&nbsp<span id="final__score">0</span></h2>
+            <button id="play__again" class="play">Play Again</button>
+        </div>
+        <div class="start__game show">
+            <h1>Hey there</h1>
+            <h2>Welcome to play MathMaster</h2>
+            <button id="play__now" class="play">Play Now</button>
         </div>
     </div>
     <script src="assets/js/nav.js"></script>
