@@ -10,7 +10,8 @@ let number1 = 0,
   score = 0,
   live = 5,
   expression = "",
-  level = 0;
+  level = 0,
+  playing = false;
 
 function liveShow() {
   const love = document.querySelectorAll(".love__icon");
@@ -44,7 +45,7 @@ function generateOperator() {
 function generateNumber() {
   if (score > 50) level = Math.floor(Math.log(score / 50) / Math.log(3));
   if (level > 4) level = 4;
-  const limits = [21, 51, 01, 1001, 5001, 6, 11, 21, 31, 51];
+  const limits = [21, 51, 101, 1001, 5001, 6, 11, 21, 31, 51];
   let limit = 0;
   generateOperator();
   if (operator == "+" || operator == "-") limit = limits[level];
@@ -98,6 +99,7 @@ function gameOver() {
   blur.classList.add("blur");
   const finalScore = document.querySelector("#final__score");
   finalScore.innerHTML = score;
+  playing = false;
 }
 
 function onSubmit() {
@@ -127,13 +129,15 @@ form.addEventListener("click", (e) => {
 
 // Keyboard
 document.addEventListener("keydown", (e) => {
-  if (e.key >= 0 && e.key <= 9)
-    submitted_result = submitted_result * 10 + parseInt(e.key);
-  if (e.key == "Backspace")
-    submitted_result = Math.floor((submitted_result /= 10));
-  if (e.key == "Enter") onSubmit();
-  //Showing Entered Result
-  my_result.innerHTML = submitted_result;
+  if (playing) {
+    if (e.key >= 0 && e.key <= 9)
+      submitted_result = submitted_result * 10 + parseInt(e.key);
+    if (e.key == "Backspace")
+      submitted_result = Math.floor((submitted_result /= 10));
+    if (e.key == "Enter") onSubmit();
+    //Showing Entered Result
+    my_result.innerHTML = submitted_result;
+  }
 });
 
 document.querySelector("#play__again").addEventListener("click", (e) => {
@@ -145,7 +149,8 @@ document.querySelector("#play__again").addEventListener("click", (e) => {
     (score = 0),
     (live = 5),
     (expression = ""),
-    (level = 0);
+    (level = 0),
+    (playing = true);
   const love = document.querySelectorAll(".love__icon");
   for (let i = 0; i < 5; i++) love[i].classList.add("red");
   const popUp = document.querySelector(".end__game");
@@ -157,6 +162,7 @@ document.querySelector("#play__again").addEventListener("click", (e) => {
 });
 
 document.querySelector("#play__now").addEventListener("click", (e) => {
+  playing = true;
   const love = document.querySelectorAll(".love__icon");
   showMath();
   const blur = document.querySelector(".body");
